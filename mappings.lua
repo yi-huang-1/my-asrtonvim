@@ -30,11 +30,37 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
+
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+
+    ["s"] = "", -- disable default s
+
+    -- exit
+    ["q"] = ":q<CR>",
+    ["qq"] = ":q!<CR>",
+    ["Q"] = ":qa!<CR>",
+
+    -- equal
+    ["s="] = "<C-w>=",
+
+    -- scroll up & down
+    ["<C-j>"] = "9j",
+    ["<C-k>"] = "9k",
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
+  },
+  i = {
+    
+  },
+  v = {
+    -- no yank when paste
+    ["p"] = '"_dP',
+
+    -- indent
+    ["<"] = "<gv",
+    [">"] = ">gv",
   },
 }
