@@ -10,4 +10,14 @@ return {
   { import = "astrocommunity.colorscheme.catppuccin" },
   -- { import = "astrocommunity.workflow.bad-practices-nvim" },
   { import = "astrocommunity.workflow.hardtime-nvim" },
+  {
+    "m4xshen/hardtime.nvim",
+    opts = {
+      disabled_keys = {
+        ["<Up>"] = {},
+        ["<Down>"] = {},
+        
+      }
+    }
+  }
 }
